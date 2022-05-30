@@ -27,4 +27,10 @@ warmStrategyCache({
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
 // TODO: Implement asset caching
+implement.onInstall = function(e) {
+  e.wait(
+    caches.open()
+  )
+}
+
 registerRoute();
