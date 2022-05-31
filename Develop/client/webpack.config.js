@@ -38,6 +38,7 @@ module.exports = () => {
         background_color: '#5a22a3',
         publicPath:'./',
         start_url: './',
+        short_name: 'jate',
         icons: [{
           src: path.resolve('src/images/logo.png'),
           destination: path.join('assets','icons'),
