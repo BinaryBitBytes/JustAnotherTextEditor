@@ -23,11 +23,11 @@ module.exports = () => {
     plugins: [
       new InjectManifest({
         swDest: 'src-sw.js',
-        swSrc: './src-sw.js'
+        swSrc: './src-sw.js',
       }),
       new HtmlWebpackPlugin({
-        title:'Contacts',
-        templates:'./index.html'
+        title:'Contact Cards',
+        templates:'./index.html',
       }),
       new WebpackPwaManifest({
         inject: true,
@@ -49,6 +49,21 @@ module.exports = () => {
 
     module: {
       rules: [
+        {
+          use:['style-loader','css-loader'],
+          test: /\.css$/i,
+        },
+        {
+          exclude: /node_modules/,
+          test: /\.m?js$/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              plugins['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
+              presets:['@babel/preset-env'],
+            }
+          }
+        }
         
       ],
     },
