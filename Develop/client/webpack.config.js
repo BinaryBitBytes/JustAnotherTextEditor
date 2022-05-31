@@ -36,8 +36,15 @@ module.exports = () => {
         theme_color: '#223ea3',
         fingerprints: false,
         background_color: '#5a22a3',
-        publicPath:'./'
-      })
+        publicPath:'./',
+        start_url: './',
+        icons: [{
+          src: path.resolve('src/images/logo.png'),
+          destination: path.join('assets','icons'),
+          sizes: [64,96,128,160,192,256,288,384,512],
+        },
+      ],
+      }),
     ],
 
     module: {
