@@ -17,9 +17,9 @@ export const putDb = async (content) => {
   console.log('putDB is in the putDB database');
   const todosDb = await openDB('jate',1);
   const transmit = todosDb.transaction('jate', 'readwrite');
-  const storeObj = storeObj.put({
-    value: content
-  });
+  // // const storeObj = storeObj.put({
+  // //   value: content
+  // // });
   const storeObj = transmit.objectStore('jate');
   const req = storeObj.put({
     value: content
