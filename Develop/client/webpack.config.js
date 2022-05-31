@@ -29,6 +29,15 @@ module.exports = () => {
         title:'Contacts',
         templates:'./index.html'
       }),
+      new WebpackPwaManifest({
+        inject: true,
+        name: 'Just Another Text Editor',
+        description: 'A JavaScript text editor in a progressive web application format',
+        theme_color: '#223ea3',
+        fingerprints: false,
+        background_color: '#5a22a3',
+        publicPath:'./'
+      })
     ],
 
     module: {
