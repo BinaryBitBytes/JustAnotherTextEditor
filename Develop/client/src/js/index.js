@@ -1,10 +1,21 @@
 import { Workbox } from 'workbox-window';
+import _ from 'lodash';
 import Editor from './editor';
 import './database';
 import '../css/style.css';
 
 const main = document.querySelector('#main');
 main.innerHTML = '';
+
+//! lines 11-18 are lodash script
+function component() {
+  const element = document.createElement('div');
+  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+
+   return element;
+ }
+
+ document.body.appendChild(component());
 
 const loadSpinner = () => {
   const spinner = document.createElement('div');
