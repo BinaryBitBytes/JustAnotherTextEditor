@@ -15,8 +15,10 @@
   "author": "Binary Bit Bytes",
   "license": "ISC",
   "dependencies": {
+    "css-loader": "^6.7.1",
     "express": "^4.17.1",
-    "if-env": "^1.0.4"
+    "if-env": "^1.0.4",
+    "style-loader": "^3.3.1"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
